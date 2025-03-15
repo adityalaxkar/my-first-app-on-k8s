@@ -26,7 +26,7 @@ pipeline {
         stage('Push to Nexus') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: "$${NEXUS_CREDENTIALS_ID}", usernameVariable: 'NEXUS_USER, passwordVariable: 'NEXUS_PASS')]) {
+                    withCredentials([usernamePassword(credentialsId: "${NEXUS_CREDENTIALS_ID}", usernameVariable: 'NEXUS_USER, passwordVariable: 'NEXUS_PASS')]) {
                     // Tag image for Nexus
                     sh "docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${NEXUS_URL}/${NEXUS_REPOSITORY}/${DOCKER_IMAGE}:${DOCKER_TAG}"
                     
