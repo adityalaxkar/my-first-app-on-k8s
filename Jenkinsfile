@@ -4,11 +4,11 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'python-webapp'
         DOCKER_TAG = "${BUILD_NUMBER}"
-        NEXUS_URL = 'nexus-service:8083'
+        NEXUS_URL = 'http://10.0.0.10:8082/'
         NEXUS_REPOSITORY = 'docker-hosted'
         NEXUS_CREDENTIAL_ID = 'nexus-credentials'
         GIT_CREDENTIALS_ID = 'git-credentials'
-        GIT_REPO_URL = 'https://github.com/YOUR_USERNAME/YOUR_REPO.git'  // Replace with your repo URL
+        GIT_REPO_URL = 'https://github.com/adityalaxkar/my-first-app-on-k8s.git'  // Replace with your repo URL
     }
 
     stages {
