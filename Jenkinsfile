@@ -58,7 +58,7 @@ pipeline {
                             # Commit and push the changes
                             git add k8s/applications/python-webapp/deployment.yaml
                             git commit -m "Update image tag to ${DOCKER_TAG}"
-                            git push https://${GIT_USER}:${GIT_PASS}@${GIT_REPO_URL#https://}
+                            git push https://${GIT_USER}:${GIT_PASS}@${GIT_REPO_URL#https://github.com/adityalaxkar/my-first-app-on-k8s}
                         """
                     }
                 }
