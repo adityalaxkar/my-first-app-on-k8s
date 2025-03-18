@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'python-webapp'
         DOCKER_TAG = "${BUILD_NUMBER}"
-        NEXUS_URL = 'http://10.0.0.10:8082/'
+        NEXUS_URL = 'http://master.nexus.local/'
         NEXUS_REPOSITORY = 'docker-hosted'
         NEXUS_CREDENTIAL_ID = 'nexus-credentials'
         GIT_CREDENTIALS_ID = 'git-credentials'
